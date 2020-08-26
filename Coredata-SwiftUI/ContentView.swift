@@ -73,7 +73,7 @@ struct EmployeeDetails: View {
     let genderType = ["Male", "Female"]
     let experienceType = ["Fresher", "Experienced"]
     @Environment(\.managedObjectContext) var managedObjectContext
-@Environment (\.presentationMode) var presentationMode
+    @Environment (\.presentationMode) var presentationMode
     var body: some View {
         NavigationView {
             Form {
@@ -118,8 +118,8 @@ struct EmployeeDetails: View {
                         print("Details saved.")
                         self.presentationMode.wrappedValue.dismiss()
                     } catch {
-                     print(error.localizedDescription)
-                     }
+                        print(error.localizedDescription)
+                    }
                 }) {
                     Text("Add Employee")
                 }.navigationBarTitle("Add Employee")
